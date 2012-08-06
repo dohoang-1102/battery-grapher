@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DF8A15A15CFB1E60002A015 /* BatteryPolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8A15915CFB1E60002A015 /* BatteryPolling.m */; };
 		7851FE9C15CF968B00826F66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7851FE9B15CF968B00826F66 /* Cocoa.framework */; };
 		7851FEA615CF968B00826F66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7851FEA415CF968B00826F66 /* InfoPlist.strings */; };
 		7851FEA815CF968B00826F66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7851FEA715CF968B00826F66 /* main.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DF8A15815CFB1E60002A015 /* BatteryPolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryPolling.h; sourceTree = "<group>"; };
+		2DF8A15915CFB1E60002A015 /* BatteryPolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryPolling.m; sourceTree = "<group>"; };
 		7851FE9715CF968B00826F66 /* battery-grapher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "battery-grapher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7851FE9B15CF968B00826F66 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7851FE9E15CF968B00826F66 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -88,6 +91,8 @@
 				7851FEAE15CF968B00826F66 /* AppMain.m */,
 				7851FEB015CF968B00826F66 /* MainMenu.xib */,
 				7851FEA215CF968B00826F66 /* Supporting Files */,
+				2DF8A15815CFB1E60002A015 /* BatteryPolling.h */,
+				2DF8A15915CFB1E60002A015 /* BatteryPolling.m */,
 			);
 			path = "battery-grapher";
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 			files = (
 				7851FEA815CF968B00826F66 /* main.m in Sources */,
 				7851FEAF15CF968B00826F66 /* AppMain.m in Sources */,
+				2DF8A15A15CFB1E60002A015 /* BatteryPolling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
