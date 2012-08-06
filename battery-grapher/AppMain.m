@@ -1,18 +1,15 @@
-//
-//  AppDelegate.m
-//  battery-grapher
-//
-//  Created by Sean Kelley on 8/5/12.
-//  Copyright (c) 2012 Sean Kelley. All rights reserved.
-//
+#import "AppMain.h"
 
-#import "AppDelegate.h"
+@implementation AppMain
 
-@implementation AppDelegate
+- (void) applicationDidFinishLaunching:(NSNotification *)note {
+    NSTimer *batteryStatusTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(printBatteryStatus) userInfo:nil repeats:YES];
+}
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    // Insert code here to initialize your application
+- (void) printBatteryStatus {
+    CFTypeRef sourceInfo = IOPSCopyPowerSourcesInfo();
+    CFArrayRef sourceList = IOPSCopyPowerSourcesList(sourceInfo);
+    NSLog(@"%@", IOPSGetPowerSourceDescription(sourceInfo, sourceList));
 }
 
 @end
