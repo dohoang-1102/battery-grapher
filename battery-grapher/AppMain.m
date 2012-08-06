@@ -1,10 +1,9 @@
 #import "AppMain.h"
-#import "BatteryPolling.h"
 
 @implementation AppMain
 
 - (void) applicationDidFinishLaunching:(NSNotification *)note {
-    [[BatteryPolling alloc] init];
+    bp = [[BatteryPolling alloc] init];
     
 
     

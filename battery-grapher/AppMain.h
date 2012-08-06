@@ -1,6 +1,9 @@
 #import <Cocoa/Cocoa.h>
+#import "BatteryPolling.h"
+@interface AppMain: NSObject <NSApplicationDelegate> {
+    BatteryPolling * bp;
+}
 
-@interface AppMain: NSObject <NSApplicationDelegate>
 
 - (void) printBatteryStatus;
 

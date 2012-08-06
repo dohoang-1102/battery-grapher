@@ -12,24 +12,24 @@
 // -(BOOL)writeToFile:(NSString *)path atomically:(BOOL)useAuxiliaryFile;
 -(BatteryPolling *)init {
     self = [super init];
-    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
-                                                           selector:@selector(notificationCallback:)
-                                                               name:NSWorkspaceDidActivateApplicationNotification
-                                                             object:nil];
 //    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
-//                                                           selector:@selector(notificationCallback)
-//                                                               name:NSWorkspaceDidWakeNotification
+//                                                           selector:@selector(onSleep:)
+//                                                               name:NSWorkspaceDidActivateApplicationNotification
 //                                                             object:nil];
-//        [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
-//                                                               selector:@selector(notificationCallback:)
-//                                                                   name:NSWorkspaceScreensDidSleepNotification
-//                                                                 object:nil];
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
+                                                           selector:@selector(onSleep:)
+                                                               name:NSWorkspaceDidWakeNotification
+                                                             object:nil];
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
+                                                           selector:@selector(onSleep:)
+                                                               name:NSWorkspaceScreensDidSleepNotification
+                                                             object:nil];
 
 
     return self;
 }
 
-- (void) notificationCallback:(NSNotification *)notification {
+- (void) onSleep:(NSNotification *)notification {
     NSLog(@"%@", [notification name]);
 }
 
