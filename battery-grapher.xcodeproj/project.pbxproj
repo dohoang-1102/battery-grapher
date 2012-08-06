@@ -13,6 +13,7 @@
 		7851FEAF15CF968B00826F66 /* AppMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 7851FEAE15CF968B00826F66 /* AppMain.m */; };
 		7851FEB215CF968B00826F66 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7851FEB015CF968B00826F66 /* MainMenu.xib */; };
 		78E34FCE15CF9C8800FC9B8B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E34FCD15CF9C8800FC9B8B /* IOKit.framework */; };
+		78E34FD115CFAE9800FC9B8B /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E34FD015CFAE9800FC9B8B /* DataStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		7851FEAE15CF968B00826F66 /* AppMain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppMain.m; sourceTree = "<group>"; };
 		7851FEB115CF968B00826F66 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		78E34FCD15CF9C8800FC9B8B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		78E34FCF15CFAE9800FC9B8B /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStore.h; sourceTree = "<group>"; };
+		78E34FD015CFAE9800FC9B8B /* DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 			children = (
 				7851FEAD15CF968B00826F66 /* AppMain.h */,
 				7851FEAE15CF968B00826F66 /* AppMain.m */,
+				78E34FCF15CFAE9800FC9B8B /* DataStore.h */,
+				78E34FD015CFAE9800FC9B8B /* DataStore.m */,
 				7851FEB015CF968B00826F66 /* MainMenu.xib */,
 				7851FEA215CF968B00826F66 /* Supporting Files */,
 			);
@@ -168,6 +173,7 @@
 			files = (
 				7851FEA815CF968B00826F66 /* main.m in Sources */,
 				7851FEAF15CF968B00826F66 /* AppMain.m in Sources */,
+				78E34FD115CFAE9800FC9B8B /* DataStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
