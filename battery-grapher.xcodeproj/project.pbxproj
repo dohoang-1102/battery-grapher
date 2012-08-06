@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7851FE9C15CF968B00826F66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7851FE9B15CF968B00826F66 /* Cocoa.framework */; };
+		7851FEA615CF968B00826F66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7851FEA415CF968B00826F66 /* InfoPlist.strings */; };
+		7851FEA815CF968B00826F66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7851FEA715CF968B00826F66 /* main.m */; };
+		7851FEAC15CF968B00826F66 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7851FEAA15CF968B00826F66 /* Credits.rtf */; };
+		7851FEAF15CF968B00826F66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7851FEAE15CF968B00826F66 /* AppDelegate.m */; };
+		7851FEB215CF968B00826F66 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7851FEB015CF968B00826F66 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7851FE9715CF968B00826F66 /* battery-grapher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "battery-grapher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7851FE9B15CF968B00826F66 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7851FE9E15CF968B00826F66 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		7851FE9F15CF968B00826F66 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7851FEA015CF968B00826F66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7851FEA315CF968B00826F66 /* battery-grapher-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "battery-grapher-Info.plist"; sourceTree = "<group>"; };
+		7851FEA515CF968B00826F66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7851FEA715CF968B00826F66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7851FEA915CF968B00826F66 /* battery-grapher-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "battery-grapher-Prefix.pch"; sourceTree = "<group>"; };
+		7851FEAB15CF968B00826F66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		7851FEAD15CF968B00826F66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7851FEAE15CF968B00826F66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7851FEB115CF968B00826F66 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7851FE9415CF968B00826F66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7851FE9C15CF968B00826F66 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7851FE8C15CF968B00826F66 = {
+			isa = PBXGroup;
+			children = (
+				7851FEA115CF968B00826F66 /* battery-grapher */,
+				7851FE9A15CF968B00826F66 /* Frameworks */,
+				7851FE9815CF968B00826F66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7851FE9815CF968B00826F66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7851FE9715CF968B00826F66 /* battery-grapher.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7851FE9A15CF968B00826F66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7851FE9B15CF968B00826F66 /* Cocoa.framework */,
+				7851FE9D15CF968B00826F66 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7851FE9D15CF968B00826F66 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7851FE9E15CF968B00826F66 /* AppKit.framework */,
+				7851FE9F15CF968B00826F66 /* CoreData.framework */,
+				7851FEA015CF968B00826F66 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7851FEA115CF968B00826F66 /* battery-grapher */ = {
+			isa = PBXGroup;
+			children = (
+				7851FEAD15CF968B00826F66 /* AppDelegate.h */,
+				7851FEAE15CF968B00826F66 /* AppDelegate.m */,
+				7851FEB015CF968B00826F66 /* MainMenu.xib */,
+				7851FEA215CF968B00826F66 /* Supporting Files */,
+			);
+			path = "battery-grapher";
+			sourceTree = "<group>";
+		};
+		7851FEA215CF968B00826F66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7851FEA315CF968B00826F66 /* battery-grapher-Info.plist */,
+				7851FEA415CF968B00826F66 /* InfoPlist.strings */,
+				7851FEA715CF968B00826F66 /* main.m */,
+				7851FEA915CF968B00826F66 /* battery-grapher-Prefix.pch */,
+				7851FEAA15CF968B00826F66 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7851FE9615CF968B00826F66 /* battery-grapher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7851FEB515CF968B00826F66 /* Build configuration list for PBXNativeTarget "battery-grapher" */;
+			buildPhases = (
+				7851FE9315CF968B00826F66 /* Sources */,
+				7851FE9415CF968B00826F66 /* Frameworks */,
+				7851FE9515CF968B00826F66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "battery-grapher";
+			productName = "battery-grapher";
+			productReference = 7851FE9715CF968B00826F66 /* battery-grapher.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7851FE8E15CF968B00826F66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Sean Kelley";
+			};
+			buildConfigurationList = 7851FE9115CF968B00826F66 /* Build configuration list for PBXProject "battery-grapher" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7851FE8C15CF968B00826F66;
+			productRefGroup = 7851FE9815CF968B00826F66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7851FE9615CF968B00826F66 /* battery-grapher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7851FE9515CF968B00826F66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7851FEA615CF968B00826F66 /* InfoPlist.strings in Resources */,
+				7851FEAC15CF968B00826F66 /* Credits.rtf in Resources */,
+				7851FEB215CF968B00826F66 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7851FE9315CF968B00826F66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7851FEA815CF968B00826F66 /* main.m in Sources */,
+				7851FEAF15CF968B00826F66 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7851FEA415CF968B00826F66 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7851FEA515CF968B00826F66 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7851FEAA15CF968B00826F66 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7851FEAB15CF968B00826F66 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		7851FEB015CF968B00826F66 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7851FEB115CF968B00826F66 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7851FEB315CF968B00826F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7851FEB415CF968B00826F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7851FEB615CF968B00826F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "battery-grapher/battery-grapher-Prefix.pch";
+				INFOPLIST_FILE = "battery-grapher/battery-grapher-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7851FEB715CF968B00826F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "battery-grapher/battery-grapher-Prefix.pch";
+				INFOPLIST_FILE = "battery-grapher/battery-grapher-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7851FE9115CF968B00826F66 /* Build configuration list for PBXProject "battery-grapher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7851FEB315CF968B00826F66 /* Debug */,
+				7851FEB415CF968B00826F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7851FEB515CF968B00826F66 /* Build configuration list for PBXNativeTarget "battery-grapher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7851FEB615CF968B00826F66 /* Debug */,
+				7851FEB715CF968B00826F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7851FE8E15CF968B00826F66 /* Project object */;
+}
