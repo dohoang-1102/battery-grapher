@@ -1,10 +1,10 @@
 #import <Cocoa/Cocoa.h>
-#import "BatteryPolling.h"
+#import "BatteryPoller.h"
+#import "BatteryLog.h"
+
 @interface AppMain: NSObject <NSApplicationDelegate> {
-    BatteryPolling * bp;
+    BatteryPoller *batteryPoller;
+    BatteryLog *batteryLog;
 }
-
-
-- (void) printBatteryStatus;
 
 @end

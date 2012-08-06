@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2DF8A15A15CFB1E60002A015 /* BatteryPolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8A15915CFB1E60002A015 /* BatteryPolling.m */; };
+		2DF8A15A15CFB1E60002A015 /* BatteryPoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8A15915CFB1E60002A015 /* BatteryPoller.m */; };
 		7851FE9C15CF968B00826F66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7851FE9B15CF968B00826F66 /* Cocoa.framework */; };
 		7851FEA615CF968B00826F66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7851FEA415CF968B00826F66 /* InfoPlist.strings */; };
 		7851FEA815CF968B00826F66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7851FEA715CF968B00826F66 /* main.m */; };
 		7851FEAF15CF968B00826F66 /* AppMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 7851FEAE15CF968B00826F66 /* AppMain.m */; };
 		7851FEB215CF968B00826F66 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7851FEB015CF968B00826F66 /* MainMenu.xib */; };
 		78E34FCE15CF9C8800FC9B8B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E34FCD15CF9C8800FC9B8B /* IOKit.framework */; };
-		78E34FD115CFAE9800FC9B8B /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E34FD015CFAE9800FC9B8B /* DataStore.m */; };
+		78E34FD115CFAE9800FC9B8B /* BatteryLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E34FD015CFAE9800FC9B8B /* BatteryLog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2DF8A15815CFB1E60002A015 /* BatteryPolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryPolling.h; sourceTree = "<group>"; };
-		2DF8A15915CFB1E60002A015 /* BatteryPolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryPolling.m; sourceTree = "<group>"; };
+		2DF8A15815CFB1E60002A015 /* BatteryPoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryPoller.h; sourceTree = "<group>"; };
+		2DF8A15915CFB1E60002A015 /* BatteryPoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryPoller.m; sourceTree = "<group>"; };
 		7851FE9715CF968B00826F66 /* battery-grapher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "battery-grapher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7851FE9B15CF968B00826F66 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7851FE9E15CF968B00826F66 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -33,8 +33,8 @@
 		7851FEAE15CF968B00826F66 /* AppMain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppMain.m; sourceTree = "<group>"; };
 		7851FEB115CF968B00826F66 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		78E34FCD15CF9C8800FC9B8B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		78E34FCF15CFAE9800FC9B8B /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStore.h; sourceTree = "<group>"; };
-		78E34FD015CFAE9800FC9B8B /* DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStore.m; sourceTree = "<group>"; };
+		78E34FCF15CFAE9800FC9B8B /* BatteryLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryLog.h; sourceTree = "<group>"; };
+		78E34FD015CFAE9800FC9B8B /* BatteryLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryLog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,12 +92,12 @@
 			children = (
 				7851FEAD15CF968B00826F66 /* AppMain.h */,
 				7851FEAE15CF968B00826F66 /* AppMain.m */,
-				78E34FCF15CFAE9800FC9B8B /* DataStore.h */,
-				78E34FD015CFAE9800FC9B8B /* DataStore.m */,
+				2DF8A15815CFB1E60002A015 /* BatteryPoller.h */,
+				2DF8A15915CFB1E60002A015 /* BatteryPoller.m */,
+				78E34FCF15CFAE9800FC9B8B /* BatteryLog.h */,
+				78E34FD015CFAE9800FC9B8B /* BatteryLog.m */,
 				7851FEB015CF968B00826F66 /* MainMenu.xib */,
 				7851FEA215CF968B00826F66 /* Supporting Files */,
-				2DF8A15815CFB1E60002A015 /* BatteryPolling.h */,
-				2DF8A15915CFB1E60002A015 /* BatteryPolling.m */,
 			);
 			path = "battery-grapher";
 			sourceTree = "<group>";
@@ -178,8 +178,8 @@
 			files = (
 				7851FEA815CF968B00826F66 /* main.m in Sources */,
 				7851FEAF15CF968B00826F66 /* AppMain.m in Sources */,
-				2DF8A15A15CFB1E60002A015 /* BatteryPolling.m in Sources */,
-				78E34FD115CFAE9800FC9B8B /* DataStore.m in Sources */,
+				2DF8A15A15CFB1E60002A015 /* BatteryPoller.m in Sources */,
+				78E34FD115CFAE9800FC9B8B /* BatteryLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

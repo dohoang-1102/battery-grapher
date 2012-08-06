@@ -6,23 +6,29 @@ typedef enum powerSource {
 } PowerSource;
 
 typedef enum eventType {
-    NONE,
+    NO_EVENT, // Should be something like BATTERY_POLL?
     STARTUP,
     SHUTDOWN,
     SLEEP,
     WAKE
 } EventType;
 
-typedef struct dataPoint {
+// Not a great name.
+typedef struct datapoint {
     long timestamp;
     int charge;
     PowerSource source;
     EventType event;
-} DataPoint;
+} Datapoint;
 
-@interface DataStore : NSArray
 
-- (DataStore*) initWithFile:(NSString*)filename;
+@interface BatteryLog : NSObject
+
+@property (readonly) NSArray *data;
+
+- (void) appendEntryWithEvent:(EventType)event;
+
+- (BatteryLog*) initWithFile:(NSString*)filename;
 - (void) saveToFile:(NSString*)filename;
 
 @end
