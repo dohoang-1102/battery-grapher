@@ -11,7 +11,12 @@
 @property (readonly) PowerSource *source;
 @property (readonly) EventType *event;
 
+// Comparison based solely on timestamps.
+- (NSComparisonResult) compare:(Datapoint*)other;
+
 @end
+
+
 
 @interface BatteryLog : NSObject
 

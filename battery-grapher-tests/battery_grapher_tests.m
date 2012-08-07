@@ -11,20 +11,38 @@
 
 @implementation battery_grapher_tests
 
-- (void)setUp{
+- (void) setUp {
     [super setUp];
     // Set-up code here.
 }
 
-- (void)tearDown {
+- (void) tearDown {
     // Tear-down code here.
     [super tearDown];
 }
 
-- (void)testLogAppend {
+- (void) testLogAppend {
     BatteryLog *log = [[BatteryLog alloc] init];
-    STAssertTrue([[log data] count] == 0, @"Log should be empty; had %d entries.", [[log data] count]);
-    [log appendEntryWithEvent:NO_EVENT];
+    NSArray *logData = [log data];
+    STAssertTrue([logData count] == 0, @"Log should be empty; had %d entries.", [logData count]);
+    
+    [log appendEntryWithEvent:EventType.NO_EVENT];
+    usleep(100000);
+    [log appendEntryWithEvent:EventType.NO_EVENT];
+    usleep(100000);
+    [log appendEntryWithEvent:EventType.NO_EVENT];
+    logData = [log data];
+    STAssertTrue([logData count] == 3, @"Log should have 3 entries; it had %d.", [logData count]);
+    
+    Datapoint *first =  [logData objectAtIndex:0];
+    Datapoint *second = [logData objectAtIndex:1];
+    Datapoint *third =  [logData objectAtIndex:2];
+    
+    NSComparisonResult c;
+    c = [first compare:second];
+    STAssertTrue(c == NSOrderedAscending, @"Datapoints logged out of order.");
+    c = [second compare:third];
+    STAssertTrue(c == NSOrderedAscending, @"Datapoints logged out of order.");
 }
 
 @end

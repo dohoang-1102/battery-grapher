@@ -50,7 +50,13 @@
     return self;
 }
 
+- (NSComparisonResult) compare:(Datapoint*)other {
+    return [timestamp compare:[other timestamp]];
+}
+
 @end
+
+
 
 @interface BatteryLog ()
 @property NSMutableArray *dataArray;
@@ -59,6 +65,12 @@
 @implementation BatteryLog
 
 @synthesize dataArray;
+
+- (BatteryLog*) init {
+    self = [super init];
+    dataArray = [[NSMutableArray alloc] init];
+    return self;
+}
 
 - (NSArray*) data {
     return dataArray;
