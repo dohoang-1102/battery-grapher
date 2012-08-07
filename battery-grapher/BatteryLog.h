@@ -1,11 +1,13 @@
 #import <Foundation/Foundation.h>
 
-typedef enum powerSource {
+#define DEFAULT_LOG_NAME @"batterylog.dat"
+
+typedef enum {
     BATTERY,
     AC_POWER
 } PowerSource;
 
-typedef enum eventType {
+typedef enum {
     NO_EVENT, // Should be something like BATTERY_POLL?
     STARTUP,
     SHUTDOWN,
@@ -14,13 +16,14 @@ typedef enum eventType {
 } EventType;
 
 // Not a great name.
-typedef struct datapoint {
-    long timestamp;
-    int charge;
-    PowerSource source;
-    EventType event;
-} Datapoint;
+@interface Datapoint : NSObject <NSCoding>
 
+@property (readonly) NSDate *timestamp;
+@property (readonly) int charge;
+@property (readonly) PowerSource source;
+@property (readonly) EventType event;
+
+@end
 
 @interface BatteryLog : NSObject
 

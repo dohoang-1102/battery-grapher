@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>battery-grapher-tests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>battery-grapher.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>7847FDC515D073EB005ED6C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7851FE9615CF968B00826F66</key>
 		<dict>
 			<key>primary</key>

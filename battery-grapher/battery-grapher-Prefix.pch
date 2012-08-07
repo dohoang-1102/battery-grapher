@@ -1,5 +1,8 @@
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
-#endif
 
-#import <IOKit/ps/IOPowerSources.h>
+    #import <IOKit/ps/IOPowerSources.h>
+
+    #define DebugLog( s, ... ) NSLog( @"%@:%d %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+
+#endif

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2DF8A15A15CFB1E60002A015 /* BatteryPoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8A15915CFB1E60002A015 /* BatteryPoller.m */; };
+		7847FDC815D073EB005ED6C2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7847FDC715D073EB005ED6C2 /* SenTestingKit.framework */; };
+		7847FDC915D073EB005ED6C2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7851FE9B15CF968B00826F66 /* Cocoa.framework */; };
+		7847FDCF15D073EB005ED6C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7847FDCD15D073EB005ED6C2 /* InfoPlist.strings */; };
+		7847FDD215D073EB005ED6C2 /* battery_grapher_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7847FDD115D073EB005ED6C2 /* battery_grapher_tests.m */; };
 		7851FE9C15CF968B00826F66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7851FE9B15CF968B00826F66 /* Cocoa.framework */; };
 		7851FEA615CF968B00826F66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7851FEA415CF968B00826F66 /* InfoPlist.strings */; };
 		7851FEA815CF968B00826F66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7851FEA715CF968B00826F66 /* main.m */; };
@@ -17,9 +21,26 @@
 		78E34FD115CFAE9800FC9B8B /* BatteryLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E34FD015CFAE9800FC9B8B /* BatteryLog.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7847FDD715D07452005ED6C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7851FE8E15CF968B00826F66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7851FE9615CF968B00826F66;
+			remoteInfo = "battery-grapher";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2DF8A15815CFB1E60002A015 /* BatteryPoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryPoller.h; sourceTree = "<group>"; };
 		2DF8A15915CFB1E60002A015 /* BatteryPoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryPoller.m; sourceTree = "<group>"; };
+		7847FDC615D073EB005ED6C2 /* battery-grapher-tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "battery-grapher-tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7847FDC715D073EB005ED6C2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7847FDCC15D073EB005ED6C2 /* battery-grapher-tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "battery-grapher-tests-Info.plist"; sourceTree = "<group>"; };
+		7847FDCE15D073EB005ED6C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7847FDD015D073EB005ED6C2 /* battery_grapher_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = battery_grapher_tests.h; sourceTree = "<group>"; };
+		7847FDD115D073EB005ED6C2 /* battery_grapher_tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = battery_grapher_tests.m; sourceTree = "<group>"; };
+		7847FDD315D073EB005ED6C2 /* battery-grapher-tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "battery-grapher-tests-Prefix.pch"; sourceTree = "<group>"; };
 		7851FE9715CF968B00826F66 /* battery-grapher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "battery-grapher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7851FE9B15CF968B00826F66 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7851FE9E15CF968B00826F66 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -38,6 +59,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7847FDC215D073EB005ED6C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7847FDC815D073EB005ED6C2 /* SenTestingKit.framework in Frameworks */,
+				7847FDC915D073EB005ED6C2 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7851FE9415CF968B00826F66 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,10 +80,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7847FDCA15D073EB005ED6C2 /* battery-grapher-tests */ = {
+			isa = PBXGroup;
+			children = (
+				7847FDD015D073EB005ED6C2 /* battery_grapher_tests.h */,
+				7847FDD115D073EB005ED6C2 /* battery_grapher_tests.m */,
+				7847FDCB15D073EB005ED6C2 /* Supporting Files */,
+			);
+			path = "battery-grapher-tests";
+			sourceTree = "<group>";
+		};
+		7847FDCB15D073EB005ED6C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7847FDCC15D073EB005ED6C2 /* battery-grapher-tests-Info.plist */,
+				7847FDCD15D073EB005ED6C2 /* InfoPlist.strings */,
+				7847FDD315D073EB005ED6C2 /* battery-grapher-tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		7851FE8C15CF968B00826F66 = {
 			isa = PBXGroup;
 			children = (
 				7851FEA115CF968B00826F66 /* battery-grapher */,
+				7847FDCA15D073EB005ED6C2 /* battery-grapher-tests */,
 				7851FE9A15CF968B00826F66 /* Frameworks */,
 				7851FE9815CF968B00826F66 /* Products */,
 			);
@@ -63,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				7851FE9715CF968B00826F66 /* battery-grapher.app */,
+				7847FDC615D073EB005ED6C2 /* battery-grapher-tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +124,7 @@
 			children = (
 				78E34FCD15CF9C8800FC9B8B /* IOKit.framework */,
 				7851FE9B15CF968B00826F66 /* Cocoa.framework */,
+				7847FDC715D073EB005ED6C2 /* SenTestingKit.framework */,
 				7851FE9D15CF968B00826F66 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -116,6 +169,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7847FDC515D073EB005ED6C2 /* battery-grapher-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7847FDD415D073EB005ED6C2 /* Build configuration list for PBXNativeTarget "battery-grapher-tests" */;
+			buildPhases = (
+				7847FDC115D073EB005ED6C2 /* Sources */,
+				7847FDC215D073EB005ED6C2 /* Frameworks */,
+				7847FDC315D073EB005ED6C2 /* Resources */,
+				7847FDC415D073EB005ED6C2 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7847FDD815D07452005ED6C2 /* PBXTargetDependency */,
+			);
+			name = "battery-grapher-tests";
+			productName = "battery-grapher-tests";
+			productReference = 7847FDC615D073EB005ED6C2 /* battery-grapher-tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		7851FE9615CF968B00826F66 /* battery-grapher */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7851FEB515CF968B00826F66 /* Build configuration list for PBXNativeTarget "battery-grapher" */;
@@ -155,11 +227,20 @@
 			projectRoot = "";
 			targets = (
 				7851FE9615CF968B00826F66 /* battery-grapher */,
+				7847FDC515D073EB005ED6C2 /* battery-grapher-tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7847FDC315D073EB005ED6C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7847FDCF15D073EB005ED6C2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7851FE9515CF968B00826F66 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -171,7 +252,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7847FDC415D073EB005ED6C2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		7847FDC115D073EB005ED6C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7847FDD215D073EB005ED6C2 /* battery_grapher_tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7851FE9315CF968B00826F66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -185,7 +290,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7847FDD815D07452005ED6C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7851FE9615CF968B00826F66 /* battery-grapher */;
+			targetProxy = 7847FDD715D07452005ED6C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		7847FDCD15D073EB005ED6C2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7847FDCE15D073EB005ED6C2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		7851FEA415CF968B00826F66 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -205,6 +326,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7847FDD515D073EB005ED6C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/battery-grapher.app/Contents/MacOS/battery-grapher";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "battery-grapher-tests/battery-grapher-tests-Prefix.pch";
+				INFOPLIST_FILE = "battery-grapher-tests/battery-grapher-tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7847FDD615D073EB005ED6C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/battery-grapher.app/Contents/MacOS/battery-grapher";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "battery-grapher-tests/battery-grapher-tests-Prefix.pch";
+				INFOPLIST_FILE = "battery-grapher-tests/battery-grapher-tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		7851FEB315CF968B00826F66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -281,6 +432,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7847FDD415D073EB005ED6C2 /* Build configuration list for PBXNativeTarget "battery-grapher-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7847FDD515D073EB005ED6C2 /* Debug */,
+				7847FDD615D073EB005ED6C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		7851FE9115CF968B00826F66 /* Build configuration list for PBXProject "battery-grapher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

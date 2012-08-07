@@ -28,6 +28,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7847FDC515D073EB005ED6C2"
+               BuildableName = "battery-grapher-tests.octest"
+               BlueprintName = "battery-grapher-tests"
+               ReferencedContainer = "container:battery-grapher.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
