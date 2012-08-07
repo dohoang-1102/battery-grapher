@@ -6,20 +6,20 @@
 //  Copyright (c) 2012 Sean Kelley, Walker Holahan. All rights reserved.
 //
 
-#import "BatteryPoller.h"
+#import "NotificationPoller.h"
 
 #define DEFAULT_POLL_INTERVAL 1.0
 
-@interface BatteryPoller ()
+@interface NotificationPoller ()
 @property (nonatomic) NSTimer *pollTimer;
 @end
 
-@implementation BatteryPoller
+@implementation NotificationPoller
 
 @synthesize log;
 @synthesize pollTimer;
 
--(BatteryPoller *)initWithLog:(BatteryLog*)l {
+-(NotificationPoller *)initWithLog:(BatteryLog*)l {
     self = [super init];
 //    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
 //                                                           selector:@selector(onSleep:)

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2DF8A15A15CFB1E60002A015 /* BatteryPoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8A15915CFB1E60002A015 /* BatteryPoller.m */; };
+		2DF8A15A15CFB1E60002A015 /* NotificationPoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8A15915CFB1E60002A015 /* NotificationPoller.m */; };
 		7847FDC815D073EB005ED6C2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7847FDC715D073EB005ED6C2 /* SenTestingKit.framework */; };
 		7847FDC915D073EB005ED6C2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7851FE9B15CF968B00826F66 /* Cocoa.framework */; };
 		7847FDCF15D073EB005ED6C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7847FDCD15D073EB005ED6C2 /* InfoPlist.strings */; };
@@ -34,8 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2DF8A15815CFB1E60002A015 /* BatteryPoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryPoller.h; sourceTree = "<group>"; };
-		2DF8A15915CFB1E60002A015 /* BatteryPoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryPoller.m; sourceTree = "<group>"; };
+		2DF8A15815CFB1E60002A015 /* NotificationPoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationPoller.h; sourceTree = "<group>"; };
+		2DF8A15915CFB1E60002A015 /* NotificationPoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationPoller.m; sourceTree = "<group>"; };
 		7847FDC615D073EB005ED6C2 /* battery-grapher-tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "battery-grapher-tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7847FDC715D073EB005ED6C2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		7847FDCC15D073EB005ED6C2 /* battery-grapher-tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "battery-grapher-tests-Info.plist"; sourceTree = "<group>"; };
@@ -160,8 +160,8 @@
 			children = (
 				7851FEAD15CF968B00826F66 /* AppMain.h */,
 				7851FEAE15CF968B00826F66 /* AppMain.m */,
-				2DF8A15815CFB1E60002A015 /* BatteryPoller.h */,
-				2DF8A15915CFB1E60002A015 /* BatteryPoller.m */,
+				2DF8A15815CFB1E60002A015 /* NotificationPoller.h */,
+				2DF8A15915CFB1E60002A015 /* NotificationPoller.m */,
 				78E34FCF15CFAE9800FC9B8B /* BatteryLog.h */,
 				78E34FD015CFAE9800FC9B8B /* BatteryLog.m */,
 				7847FE8415D0E713005ED6C2 /* BatteryEnumTypes.h */,
@@ -301,7 +301,7 @@
 			files = (
 				7851FEA815CF968B00826F66 /* main.m in Sources */,
 				7851FEAF15CF968B00826F66 /* AppMain.m in Sources */,
-				2DF8A15A15CFB1E60002A015 /* BatteryPoller.m in Sources */,
+				2DF8A15A15CFB1E60002A015 /* NotificationPoller.m in Sources */,
 				78E34FD115CFAE9800FC9B8B /* BatteryLog.m in Sources */,
 				7847FE8115D0E6F0005ED6C2 /* Enum.m in Sources */,
 				7847FE8615D0E714005ED6C2 /* BatteryEnumTypes.m in Sources */,

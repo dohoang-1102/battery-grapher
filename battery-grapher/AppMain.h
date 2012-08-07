@@ -1,9 +1,9 @@
 #import <Cocoa/Cocoa.h>
-#import "BatteryPoller.h"
+#import "NotificationPoller.h"
 #import "BatteryLog.h"
 
 @interface AppMain: NSObject <NSApplicationDelegate> {
-    BatteryPoller *batteryPoller;
+    NotificationPoller *notificationPoller;
     BatteryLog *batteryLog;
 }
 

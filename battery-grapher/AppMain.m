@@ -4,7 +4,7 @@
 
 - (void) applicationDidFinishLaunching:(NSNotification *)note {
     batteryLog = [[BatteryLog alloc] init];
-    batteryPoller = [[BatteryPoller alloc] initWithLog:batteryLog];
+    notificationPoller = [[NotificationPoller alloc] initWithLog:batteryLog];
 }
 
 @end

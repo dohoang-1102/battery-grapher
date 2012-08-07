@@ -30,19 +30,22 @@
         charge = 0;
         source = 0;
         
-        //    CFTypeRef sourceInfo = IOPSCopyPowerSourcesInfo();
-        //    CFArrayRef sourceList = IOPSCopyPowerSourcesList(sourceInfo);
-        //    NSDictionary *batteryInfo = (__bridge NSDictionary*)
-        //    // Is zero necessarily always the battery?
-        //        IOPSGetPowerSourceDescription(sourceInfo, CFArrayGetValueAtIndex(sourceList, 0));
-        //    NSLog(@"%@", batteryInfo);
-        //    NSNumber *currentCharge = [batteryInfo valueForKey: @"Current Capacity"];
-        //    NSLog(@"%d", [currentCharge intValue]);
-        //
-        ////    NSString *powerSource = [batteryInfo valueForKey: @"Power Source State"];
-        ////    NSString *batteryCapacity = [batteryInfo valueForKey: @"Current Capacity"];
-        DebugLog(@"%@", theEvent);
+        CFTypeRef sourceInfo = IOPSCopyPowerSourcesInfo();
+        CFArrayRef sourceList = IOPSCopyPowerSourcesList(sourceInfo);
+        NSDictionary *batteryInfo = (__bridge NSDictionary*)
+//      Is zero necessarily always the battery?
+        IOPSGetPowerSourceDescription(sourceInfo, CFArrayGetValueAtIndex(sourceList, 0));
+
+        NSString *powerSource = [batteryInfo valueForKey: @"Power Source State"];
+        NSString *batteryCapacity = [batteryInfo valueForKey: @"Current Capacity"];
         
+        NSDateFormatter *formatter;
+        NSString        *dateString;
+        formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"dd-MM-yyyy HH:mm:ss"];
+        dateString = [formatter stringFromDate:[NSDate date]];
+        
+        DebugLog(@"%@ %@ %@ %@", dateString, powerSource, batteryCapacity, theEvent);
         event = theEvent;
     }
     return self;

@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "BatteryLog.h"
 
-@interface BatteryPoller : NSObject
+@interface NotificationPoller : NSObject
 
 @property (readonly) BatteryLog *log;
 @property (nonatomic) NSTimeInterval pollInterval;
 
-- (BatteryPoller*) initWithLog:(BatteryLog*)l;
+- (NotificationPoller*) initWithLog:(BatteryLog*)l;
 
 @end
