@@ -12,6 +12,8 @@
 		7847FDC915D073EB005ED6C2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7851FE9B15CF968B00826F66 /* Cocoa.framework */; };
 		7847FDCF15D073EB005ED6C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7847FDCD15D073EB005ED6C2 /* InfoPlist.strings */; };
 		7847FDD215D073EB005ED6C2 /* battery_grapher_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7847FDD115D073EB005ED6C2 /* battery_grapher_tests.m */; };
+		7847FE8115D0E6F0005ED6C2 /* Enum.m in Sources */ = {isa = PBXBuildFile; fileRef = 7847FE8015D0E6F0005ED6C2 /* Enum.m */; };
+		7847FE8615D0E714005ED6C2 /* BatteryEnumTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7847FE8515D0E714005ED6C2 /* BatteryEnumTypes.m */; };
 		7851FE9C15CF968B00826F66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7851FE9B15CF968B00826F66 /* Cocoa.framework */; };
 		7851FEA615CF968B00826F66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7851FEA415CF968B00826F66 /* InfoPlist.strings */; };
 		7851FEA815CF968B00826F66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7851FEA715CF968B00826F66 /* main.m */; };
@@ -41,6 +43,10 @@
 		7847FDD015D073EB005ED6C2 /* battery_grapher_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = battery_grapher_tests.h; sourceTree = "<group>"; };
 		7847FDD115D073EB005ED6C2 /* battery_grapher_tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = battery_grapher_tests.m; sourceTree = "<group>"; };
 		7847FDD315D073EB005ED6C2 /* battery-grapher-tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "battery-grapher-tests-Prefix.pch"; sourceTree = "<group>"; };
+		7847FE7F15D0E6F0005ED6C2 /* Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enum.h; sourceTree = "<group>"; };
+		7847FE8015D0E6F0005ED6C2 /* Enum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enum.m; sourceTree = "<group>"; };
+		7847FE8415D0E713005ED6C2 /* BatteryEnumTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryEnumTypes.h; sourceTree = "<group>"; };
+		7847FE8515D0E714005ED6C2 /* BatteryEnumTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryEnumTypes.m; sourceTree = "<group>"; };
 		7851FE9715CF968B00826F66 /* battery-grapher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "battery-grapher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7851FE9B15CF968B00826F66 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7851FE9E15CF968B00826F66 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -100,6 +106,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7847FE8315D0E6F8005ED6C2 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				7847FE7F15D0E6F0005ED6C2 /* Enum.h */,
+				7847FE8015D0E6F0005ED6C2 /* Enum.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		7851FE8C15CF968B00826F66 = {
 			isa = PBXGroup;
 			children = (
@@ -149,7 +164,10 @@
 				2DF8A15915CFB1E60002A015 /* BatteryPoller.m */,
 				78E34FCF15CFAE9800FC9B8B /* BatteryLog.h */,
 				78E34FD015CFAE9800FC9B8B /* BatteryLog.m */,
+				7847FE8415D0E713005ED6C2 /* BatteryEnumTypes.h */,
+				7847FE8515D0E714005ED6C2 /* BatteryEnumTypes.m */,
 				7851FEB015CF968B00826F66 /* MainMenu.xib */,
+				7847FE8315D0E6F8005ED6C2 /* Library */,
 				7851FEA215CF968B00826F66 /* Supporting Files */,
 			);
 			path = "battery-grapher";
@@ -285,6 +303,8 @@
 				7851FEAF15CF968B00826F66 /* AppMain.m in Sources */,
 				2DF8A15A15CFB1E60002A015 /* BatteryPoller.m in Sources */,
 				78E34FD115CFAE9800FC9B8B /* BatteryLog.m in Sources */,
+				7847FE8115D0E6F0005ED6C2 /* Enum.m in Sources */,
+				7847FE8615D0E714005ED6C2 /* BatteryEnumTypes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +459,7 @@
 				7847FDD615D073EB005ED6C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7851FE9115CF968B00826F66 /* Build configuration list for PBXProject "battery-grapher" */ = {
 			isa = XCConfigurationList;

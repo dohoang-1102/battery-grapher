@@ -11,8 +11,8 @@
     if (self = [super init]) {
         timestamp = [coder decodeObjectForKey:@"timestamp"];
         charge =    [coder decodeIntForKey:@"charge"];
-        source =    [coder decodeIntForKey:@"source"];
-        event =     [coder decodeIntForKey:@"event"];
+        source =    [coder decodeObjectForKey:@"source"];
+        event =     [coder decodeObjectForKey:@"event"];
     }
     return self;
 }
@@ -20,11 +20,11 @@
 - (void) encodeWithCoder:(NSCoder *)coder {
     [coder encodeObject:[self timestamp] forKey:@"timestamp"];
     [coder encodeInt:   [self charge]    forKey:@"charge"];
-    [coder encodeInt:   [self source]    forKey:@"source"];
-    [coder encodeInt:   [self event]     forKey:@"event"];
+    [coder encodeObject:[self source]    forKey:@"source"];
+    [coder encodeObject:[self event]     forKey:@"event"];
 }
 
-- (Datapoint*) initWithEvent:(EventType)theEvent {
+- (Datapoint*) initWithEvent:(EventType*)theEvent {
     if (self = [super init]) {
         timestamp = [NSDate date];
         charge = 0;
@@ -41,7 +41,7 @@
         //
         ////    NSString *powerSource = [batteryInfo valueForKey: @"Power Source State"];
         ////    NSString *batteryCapacity = [batteryInfo valueForKey: @"Current Capacity"];
-        DebugLog(@"%d", theEvent);
+        DebugLog(@"%@", theEvent);
         
         event = theEvent;
     }
@@ -62,7 +62,7 @@
     return dataArray;
 }
 
-- (void) appendEntryWithEvent:(EventType)event {
+- (void) appendEntryWithEvent:(EventType*)event {
     [dataArray addObject:[[Datapoint alloc] initWithEvent:event]];
 }
 

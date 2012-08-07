@@ -39,15 +39,15 @@
 }
 
 - (void) onWake:(NSNotification *)notification {
-    [log appendEntryWithEvent:WAKE];
+    [log appendEntryWithEvent:EventType.WAKE];
 }
 
 - (void) onSleep:(NSNotification *)notification {
-    [log appendEntryWithEvent:SLEEP];
+    [log appendEntryWithEvent:EventType.SLEEP];
 }
 
 - (void) onPoll {
-    [log appendEntryWithEvent:NO_EVENT];
+    [log appendEntryWithEvent:EventType.NO_EVENT];
 }
 
 - (void) setPollInterval:(NSTimeInterval)pollInterval {
