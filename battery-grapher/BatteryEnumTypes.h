@@ -10,6 +10,7 @@ EnumDecl(PowerSource, AC_POWER)
 @interface EventType : Enum
 
 EnumDecl(EventType, NO_EVENT)
+EnumDecl(EventType, POLL)
 EnumDecl(EventType, STARTUP)
 EnumDecl(EventType, SHUTDOWN)
 EnumDecl(EventType, SLEEP)

@@ -47,7 +47,7 @@
 }
 
 - (void) onPoll {
-    [log appendEntryWithEvent:EventType.NO_EVENT];
+    [log appendEntryWithEvent:EventType.POLL];
 }
 
 - (void) setPollInterval:(NSTimeInterval)pollInterval {

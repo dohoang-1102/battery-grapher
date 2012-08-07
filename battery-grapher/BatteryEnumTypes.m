@@ -10,6 +10,7 @@ EnumImpl(PowerSource, AC_POWER)
 @implementation EventType
 
 EnumImpl(EventType, NO_EVENT)
+EnumImpl(EventType, POLL)
 EnumImpl(EventType, STARTUP)
 EnumImpl(EventType, SHUTDOWN)
 EnumImpl(EventType, SLEEP)
