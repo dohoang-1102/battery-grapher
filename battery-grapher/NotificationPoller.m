@@ -7,6 +7,7 @@
 //
 
 #import "NotificationPoller.h"
+#import <sys/sysctl.h>
 
 #define DEFAULT_POLL_INTERVAL 1.0
 
@@ -21,10 +22,17 @@
 
 -(NotificationPoller *)initWithLog:(BatteryLog*)l {
     self = [super init];
-//    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
-//                                                           selector:@selector(onSleep:)
-//                                                               name:NSWorkspaceDidActivateApplicationNotification
-//                                                             object:nil];
+    int mib[2];
+    struct timeval boottime;
+    size_t len;
+    
+    mib[0] = CTL_KERN;
+    mib[1] = KERN_BOOTTIME;
+    len = sizeof(boottime);
+    sysctl(mib, 2, &boottime, &len, NULL, 0);
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:(boottime.tv_sec)];
+  //  NSLog(@"%@", [date descriptionWithLocale:[NSLocale currentLocale]]);
+    // TODO throw this at sean's interface to register a machine boot event
     [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
                                                            selector:@selector(onWake:)
                                                                name:NSWorkspaceDidWakeNotification
@@ -33,6 +41,15 @@
                                                            selector:@selector(onSleep:)
                                                                name:NSWorkspaceWillSleepNotification
                                                              object:nil];
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
+                                                           selector:@selector(onPowerOff:)
+                                                               name:NSWorkspaceWillPowerOffNotification
+                                                             object:nil];
+
+    // TODO later
+    // NSWorkspaceScreensDidWakeNotification
+    // NSWorkspaceScreensDidSleepNotification
+    
     log = l;
     [self setPollInterval:DEFAULT_POLL_INTERVAL];
     return self;
@@ -46,6 +63,9 @@
     [log appendEntryWithEvent:EventType.SLEEP];
 }
 
+- (void) onPowerOff:(NSNotification *)notification {
+    [log appendEntryWithEvent:EventType.SHUTDOWN];
+}
 - (void) onPoll {
     [log appendEntryWithEvent:EventType.POLL];
 }
