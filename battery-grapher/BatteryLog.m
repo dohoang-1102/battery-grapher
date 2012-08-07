@@ -30,9 +30,8 @@
 
 - (Datapoint*) initWithEvent:(EventType*)theEvent withTimestamp:(NSDate*)theTimestamp {
     if (self = [super init]) {
-        if (timestamp == nil) {
-            timestamp = [NSDate date];
-        }
+        timestamp = theTimestamp != nil ? theTimestamp : [NSDate date];
+        
         charge = 0;
         source = 0;
         
@@ -45,13 +44,7 @@
         NSString *powerSource = [batteryInfo valueForKey: @"Power Source State"];
         NSString *batteryCapacity = [batteryInfo valueForKey: @"Current Capacity"];
         
-        NSDateFormatter *formatter;
-        NSString        *dateString;
-        formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat:@"dd-MM-yyyy HH:mm:ss"];
-        dateString = [formatter stringFromDate:[NSDate date]];
-        
-        DebugLog(@"%@ %@ %@ %@", dateString, powerSource, batteryCapacity, theEvent);
+        DebugLog(@"%@ %@ %@ %@", timestamp, powerSource, batteryCapacity, theEvent);
         event = theEvent;
     }
     return self;
