@@ -25,17 +25,23 @@
 }
 
 - (Datapoint*) initWithEvent:(EventType*)theEvent {
+    return [self initWithEvent:theEvent withTimestamp:nil];
+}
+
+- (Datapoint*) initWithEvent:(EventType*)theEvent withTimestamp:(NSDate*)theTimestamp {
     if (self = [super init]) {
-        timestamp = [NSDate date];
+        if (timestamp == nil) {
+            timestamp = [NSDate date];
+        }
         charge = 0;
         source = 0;
         
         CFTypeRef sourceInfo = IOPSCopyPowerSourcesInfo();
         CFArrayRef sourceList = IOPSCopyPowerSourcesList(sourceInfo);
         NSDictionary *batteryInfo = (__bridge NSDictionary*)
-//      Is zero necessarily always the battery?
+        //      Is zero necessarily always the battery?
         IOPSGetPowerSourceDescription(sourceInfo, CFArrayGetValueAtIndex(sourceList, 0));
-
+        
         NSString *powerSource = [batteryInfo valueForKey: @"Power Source State"];
         NSString *batteryCapacity = [batteryInfo valueForKey: @"Current Capacity"];
         
@@ -63,6 +69,10 @@
 
 - (NSArray*) data {
     return dataArray;
+}
+
+- (void) appendBootTimeEntry:(NSDate*)boottime; {
+    [dataArray addObject:[[Datapoint alloc] initWithEvent:EventType.STARTUP withTimestamp:nil]];
 }
 
 - (void) appendEntryWithEvent:(EventType*)event {

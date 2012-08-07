@@ -17,7 +17,8 @@
 
 @property (readonly) NSArray *data;
 
-- (void) appendEntryWithEvent:(EventType*)event;
+- (void) appendBootTimeEntry:(NSDate*)boottime;
+- (void) appendEntryWithEvent:(EventType*)theEvent;
 
 - (BatteryLog*) initWithFile:(NSString*)filename;
 - (void) saveToFile:(NSString*)filename;
