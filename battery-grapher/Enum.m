@@ -102,7 +102,7 @@ static Enum *illegalEnumFunction(id self, SEL _cmd) {
         enumItems = [[NSMutableDictionary alloc] init];
     }
     assert([enumItems objectForKey:name] == nil);
-    Enum *e = [[self class] new];
+    Enum *e = [[[self class] alloc] init];
     [e _setName:name];
     [enumItems setObject:e forKey:name];
     return e;
