@@ -71,8 +71,8 @@
     return dataArray;
 }
 
-- (void) appendBootTimeEntry:(NSDate*)boottime; {
-    [dataArray addObject:[[Datapoint alloc] initWithEvent:EventType.STARTUP withTimestamp:nil]];
+- (void) appendBootTimeEntry:(NSDate*)bootTime; {
+    [dataArray addObject:[[Datapoint alloc] initWithEvent:EventType.STARTUP withTimestamp:bootTime]];
 }
 
 - (void) appendEntryWithEvent:(EventType*)event {

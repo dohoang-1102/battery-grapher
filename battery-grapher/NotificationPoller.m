@@ -22,17 +22,11 @@
 
 -(NotificationPoller *)initWithLog:(BatteryLog*)l {
     self = [super init];
-    int mib[2];
-    struct timeval boottime;
-    size_t len;
-    
-    mib[0] = CTL_KERN;
-    mib[1] = KERN_BOOTTIME;
-    len = sizeof(boottime);
-    sysctl(mib, 2, &boottime, &len, NULL, 0);
-    NSDate *date = [NSDate dateWithTimeIntervalSince1970:(boottime.tv_sec)];
-  //  NSLog(@"%@", [date descriptionWithLocale:[NSLocale currentLocale]]);
     // TODO throw this at sean's interface to register a machine boot event
+    log = l;
+
+    [self onBoot];
+
     [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
                                                            selector:@selector(onWake:)
                                                                name:NSWorkspaceDidWakeNotification
@@ -50,11 +44,18 @@
     // NSWorkspaceScreensDidWakeNotification
     // NSWorkspaceScreensDidSleepNotification
     
-    log = l;
+    
     [self setPollInterval:DEFAULT_POLL_INTERVAL];
     return self;
 }
-
+- (void) onBoot {
+    int mib[2] = {CTL_KERN, KERN_BOOTTIME};
+    struct timeval bootTime;
+    size_t len = sizeof(bootTime);
+    
+    sysctl(mib, 2, &bootTime, &len, NULL, 0);
+    [log appendBootTimeEntry:[NSDate dateWithTimeIntervalSince1970:(bootTime.tv_sec)]];
+}
 - (void) onWake:(NSNotification *)notification {
     [log appendEntryWithEvent:EventType.WAKE];
 }
