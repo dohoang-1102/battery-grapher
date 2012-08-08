@@ -30,8 +30,9 @@
 
 - (Datapoint*) initWithEvent:(EventType*)theEvent withTimestamp:(NSDate*)theTimestamp {
     if (self = [super init]) {
+//        timestamp = theTimestamp != nil ?
+  //      [theTimestamp descriptionWithLocale:[NSLocale currentLocale]] : [[NSDate date] descriptionWithLocale:[NSLocale currentLocale]] ;
         timestamp = theTimestamp != nil ? theTimestamp : [NSDate date];
-        
         charge = 0;
         source = 0;
         
@@ -41,10 +42,10 @@
         //      Is zero necessarily always the battery?
         IOPSGetPowerSourceDescription(sourceInfo, CFArrayGetValueAtIndex(sourceList, 0));
         
-        NSString *powerSource = [batteryInfo valueForKey: @"Power Source State"];
-        NSString *batteryCapacity = [batteryInfo valueForKey: @"Current Capacity"];
+        source = [[batteryInfo valueForKey: @"Power Source State"] caseInsensitiveCompare: [NSString stringWithUTF8String:"AC Power"]] ? PowerSource.AC_POWER : PowerSource.BATTERY;
+        charge = [batteryInfo valueForKey: @"Current Capacity"];
         
-        DebugLog(@"%@ %@ %@ %@", timestamp, powerSource, batteryCapacity, theEvent);
+        DebugLog(@"%@ %@ %d %@", timestamp, source, charge, theEvent);
         event = theEvent;
     }
     return self;
