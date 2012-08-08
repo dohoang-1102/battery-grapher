@@ -51,7 +51,7 @@
     return self;
 }
 -(NSString *)description {
-    return  [source description];
+    return  [event description];
 }
 
 - (NSComparisonResult) compare:(Datapoint*)other {
