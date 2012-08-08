@@ -45,10 +45,13 @@
         source = [[batteryInfo valueForKey: @"Power Source State"] caseInsensitiveCompare: [NSString stringWithUTF8String:"AC Power"]] ? PowerSource.AC_POWER : PowerSource.BATTERY;
         charge = (int)[batteryInfo valueForKey: @"Current Capacity"]; //bite me
         
-        DebugLog(@"%@ %@ %@ %@", timestamp, source, charge, theEvent) ;
+   //     DebugLog(@"%@ %@ %@ %@", timestamp, source, charge, theEvent) ;
         event = theEvent;
     }
     return self;
+}
+-(NSString *)description {
+    return  [source description];
 }
 
 - (NSComparisonResult) compare:(Datapoint*)other {
@@ -83,6 +86,7 @@
 
 - (void) appendEntryWithEvent:(EventType*)event {
     [dataArray addObject:[[Datapoint alloc] initWithEvent:event]];
+    DebugLog(@"%@", dataArray);
 }
 
 - (BatteryLog*) initWithFile:(NSString*)filename {
