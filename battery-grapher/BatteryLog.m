@@ -43,9 +43,9 @@
         IOPSGetPowerSourceDescription(sourceInfo, CFArrayGetValueAtIndex(sourceList, 0));
         
         source = [[batteryInfo valueForKey: @"Power Source State"] caseInsensitiveCompare: [NSString stringWithUTF8String:"AC Power"]] ? PowerSource.AC_POWER : PowerSource.BATTERY;
-        charge = [batteryInfo valueForKey: @"Current Capacity"];
+        charge = (int)[batteryInfo valueForKey: @"Current Capacity"]; //bite me
         
-        DebugLog(@"%@ %@ %@ %@", timestamp, source, charge, theEvent);
+        DebugLog(@"%@ %@ %@ %@", timestamp, source, charge, theEvent) ;
         event = theEvent;
     }
     return self;
