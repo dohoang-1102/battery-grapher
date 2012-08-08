@@ -10,7 +10,7 @@
 - (Datapoint*) initWithCoder:(NSCoder*)coder {
     if (self = [super init]) {
         timestamp = [coder decodeObjectForKey:@"timestamp"];
-        charge =    [coder decodeIntForKey:@"charge"];
+        charge =    [coder decodeIntegerForKey:@"charge"];
         source =    [coder decodeObjectForKey:@"source"];
         event =     [coder decodeObjectForKey:@"event"];
     }
@@ -18,10 +18,10 @@
 }
 
 - (void) encodeWithCoder:(NSCoder *)coder {
-    [coder encodeObject:[self timestamp] forKey:@"timestamp"];
-    [coder encodeInt:   [self charge]    forKey:@"charge"];
-    [coder encodeObject:[self source]    forKey:@"source"];
-    [coder encodeObject:[self event]     forKey:@"event"];
+    [coder encodeObject: [self timestamp] forKey:@"timestamp"];
+    [coder encodeInteger:[self charge]    forKey:@"charge"];
+    [coder encodeObject: [self source]    forKey:@"source"];
+    [coder encodeObject: [self event]     forKey:@"event"];
 }
 
 - (Datapoint*) initWithEvent:(EventType*)theEvent {
@@ -42,16 +42,17 @@
         //      Is zero necessarily always the battery?
         IOPSGetPowerSourceDescription(sourceInfo, CFArrayGetValueAtIndex(sourceList, 0));
         
-        source = [[batteryInfo valueForKey: @"Power Source State"] caseInsensitiveCompare: [NSString stringWithUTF8String:"AC Power"]] ? PowerSource.AC_POWER : PowerSource.BATTERY;
-        charge = (int)[batteryInfo valueForKey: @"Current Capacity"]; //bite me
+        source = [[batteryInfo valueForKey: @"Power Source State"] isEqual:@"AC Power"] ? PowerSource.AC_POWER : PowerSource.BATTERY;
+        charge = [[batteryInfo valueForKey: @"Current Capacity"] integerValue]; // I refuse.
         
    //     DebugLog(@"%@ %@ %@ %@", timestamp, source, charge, theEvent) ;
         event = theEvent;
     }
     return self;
 }
--(NSString *)description {
-    return  [event description];
+
+- (NSString*) description {
+    return [NSString stringWithFormat:@"%3ld%% on %@ t=%.0lf [%@]", charge, source, [timestamp timeIntervalSince1970], event];
 }
 
 - (NSComparisonResult) compare:(Datapoint*)other {
@@ -86,7 +87,7 @@
 
 - (void) appendEntryWithEvent:(EventType*)event {
     [dataArray addObject:[[Datapoint alloc] initWithEvent:event]];
-    DebugLog(@"%@", dataArray);
+    DebugLog(@"Logged %@", [dataArray lastObject]);
 }
 
 - (BatteryLog*) initWithFile:(NSString*)filename {

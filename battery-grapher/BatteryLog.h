@@ -7,7 +7,7 @@
 @interface Datapoint : NSObject <NSCoding>
 
 @property (readonly) NSDate *timestamp;
-@property (readonly) int charge;
+@property (readonly) NSInteger charge;
 @property (readonly) PowerSource *source;
 @property (readonly) EventType *event;
 
@@ -22,7 +22,7 @@
 
 @property (readonly) NSArray *data;
 
-- (void) appendBootTimeEntry:(NSDate*)boottime;
+- (void) appendBootTimeEntry:(NSDate*)bootTime;
 - (void) appendEntryWithEvent:(EventType*)theEvent;
 
 - (BatteryLog*) initWithFile:(NSString*)filename;

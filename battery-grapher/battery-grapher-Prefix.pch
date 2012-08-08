@@ -1,8 +1,9 @@
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
-
     #import <IOKit/ps/IOPowerSources.h>
-
+    
+    extern void NoPrefixLog (NSString *format, ...);
+    #define NSLog NoPrefixLog
     #define DebugLog( s, ... ) NSLog( @"%@:%d %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 
 #endif
