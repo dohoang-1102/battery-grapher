@@ -30,8 +30,6 @@
 
 - (Datapoint*) initWithEvent:(EventType*)theEvent withTimestamp:(NSDate*)theTimestamp {
     if (self = [super init]) {
-//        timestamp = theTimestamp != nil ?
-  //      [theTimestamp descriptionWithLocale:[NSLocale currentLocale]] : [[NSDate date] descriptionWithLocale:[NSLocale currentLocale]] ;
         timestamp = theTimestamp != nil ? theTimestamp : [NSDate date];
         charge = 0;
         source = 0;
@@ -43,9 +41,7 @@
         IOPSGetPowerSourceDescription(sourceInfo, CFArrayGetValueAtIndex(sourceList, 0));
         
         source = [[batteryInfo valueForKey: @"Power Source State"] isEqual:@"AC Power"] ? PowerSource.AC_POWER : PowerSource.BATTERY;
-        charge = [[batteryInfo valueForKey: @"Current Capacity"] integerValue]; // I refuse.
-        
-   //     DebugLog(@"%@ %@ %@ %@", timestamp, source, charge, theEvent) ;
+        charge = [[batteryInfo valueForKey: @"Current Capacity"] integerValue]; // Your loss.
         event = theEvent;
     }
     return self;
@@ -82,7 +78,9 @@
 }
 
 - (void) appendBootTimeEntry:(NSDate*)bootTime; {
+    // Ignore current battery life and shit when this is rendered in the UI
     [dataArray addObject:[[Datapoint alloc] initWithEvent:EventType.STARTUP withTimestamp:bootTime]];
+    DebugLog(@"Logged %@", [dataArray lastObject]);
 }
 
 - (void) appendEntryWithEvent:(EventType*)event {
