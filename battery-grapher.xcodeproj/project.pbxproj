@@ -65,6 +65,14 @@
 		78574F3915E97A2C00FC80B5 /* BatteryGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryGraph.h; sourceTree = "<group>"; };
 		78574F3A15E97A2C00FC80B5 /* BatteryGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryGraph.m; sourceTree = "<group>"; };
 		78574F5015E9888300FC80B5 /* GraphKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GraphKit.framework; path = ../../../../../System/Library/PrivateFrameworks/GraphKit.framework; sourceTree = "<group>"; };
+		78574F7215EABDB200FC80B5 /* GRAreaDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRAreaDataSet.h; sourceTree = "<group>"; };
+		78574F7315EABDB200FC80B5 /* GRAxes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRAxes.h; sourceTree = "<group>"; };
+		78574F7415EABDB200FC80B5 /* GRChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRChartView.h; sourceTree = "<group>"; };
+		78574F7515EABDB200FC80B5 /* GRColumnDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRColumnDataSet.h; sourceTree = "<group>"; };
+		78574F7615EABDB200FC80B5 /* GRDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRDataSet.h; sourceTree = "<group>"; };
+		78574F7715EABDB200FC80B5 /* GRLineDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRLineDataSet.h; sourceTree = "<group>"; };
+		78574F7815EABDB200FC80B5 /* GRPieDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRPieDataSet.h; sourceTree = "<group>"; };
+		78574F7915EABDB200FC80B5 /* GRXYDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRXYDataSet.h; sourceTree = "<group>"; };
 		78E34FCD15CF9C8800FC9B8B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		78E34FCF15CFAE9800FC9B8B /* BatteryLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryLog.h; sourceTree = "<group>"; };
 		78E34FD015CFAE9800FC9B8B /* BatteryLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryLog.m; sourceTree = "<group>"; };
@@ -116,6 +124,7 @@
 		7847FE8315D0E6F8005ED6C2 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				78574F6315EAB8CF00FC80B5 /* GraphKit Headers */,
 				7847FE7F15D0E6F0005ED6C2 /* Enum.h */,
 				7847FE8015D0E6F0005ED6C2 /* Enum.m */,
 			);
@@ -192,6 +201,21 @@
 				7851FEA915CF968B00826F66 /* battery-grapher-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		78574F6315EAB8CF00FC80B5 /* GraphKit Headers */ = {
+			isa = PBXGroup;
+			children = (
+				78574F7215EABDB200FC80B5 /* GRAreaDataSet.h */,
+				78574F7315EABDB200FC80B5 /* GRAxes.h */,
+				78574F7415EABDB200FC80B5 /* GRChartView.h */,
+				78574F7515EABDB200FC80B5 /* GRColumnDataSet.h */,
+				78574F7615EABDB200FC80B5 /* GRDataSet.h */,
+				78574F7715EABDB200FC80B5 /* GRLineDataSet.h */,
+				78574F7815EABDB200FC80B5 /* GRPieDataSet.h */,
+				78574F7915EABDB200FC80B5 /* GRXYDataSet.h */,
+			);
+			name = "GraphKit Headers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

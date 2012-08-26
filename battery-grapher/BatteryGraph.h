@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "GRChartView.h"
 
 @interface BatteryGraph : GRChartView
 

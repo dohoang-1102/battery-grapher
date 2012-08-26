@@ -1,5 +1,7 @@
 #import "BatteryLog.h"
 
+const NSInteger BLUnknownCharge = -1;
+
 @implementation Datapoint
 
 @synthesize timestamp;
@@ -37,18 +39,20 @@
         CFTypeRef sourceInfo = IOPSCopyPowerSourcesInfo();
         CFArrayRef sourceList = IOPSCopyPowerSourcesList(sourceInfo);
         NSDictionary *batteryInfo = (__bridge NSDictionary*)
-        //      Is zero necessarily always the battery?
-        IOPSGetPowerSourceDescription(sourceInfo, CFArrayGetValueAtIndex(sourceList, 0));
+            // Is zero necessarily always the battery?
+            IOPSGetPowerSourceDescription(sourceInfo, CFArrayGetValueAtIndex(sourceList, 0));        
         
         source = [[batteryInfo valueForKey: @"Power Source State"] isEqual:@"AC Power"] ? PowerSource.AC_POWER : PowerSource.BATTERY;
-        charge = [[batteryInfo valueForKey: @"Current Capacity"] integerValue]; // Your loss.
+        charge = theEvent == EventType.STARTUP ? BLUnknownCharge : [[batteryInfo valueForKey: @"Current Capacity"] integerValue];
         event = theEvent;
     }
     return self;
 }
 
 - (NSString*) description {
-    return [NSString stringWithFormat:@"%3ld%% on %@ t=%.0lf [%@]", charge, source, [timestamp timeIntervalSince1970], event];
+    return charge == BLUnknownCharge ?
+    [NSString stringWithFormat:@"  ?%% on %@ t=%.0lf [%@]", source, [timestamp timeIntervalSince1970], event] :
+    [NSString stringWithFormat:@"%3ld%% on %@ t=%.0lf [%@]", charge, source, [timestamp timeIntervalSince1970], event];
 }
 
 - (NSComparisonResult) compare:(Datapoint*)other {

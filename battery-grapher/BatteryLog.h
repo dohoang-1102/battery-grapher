@@ -3,6 +3,8 @@
 
 #define DEFAULT_LOG_NAME @"batterylog.dat"
 
+extern const NSInteger BLUnknownCharge;
+
 // Not a great name.
 @interface Datapoint : NSObject <NSCoding>
 
