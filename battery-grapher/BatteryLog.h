@@ -28,4 +28,8 @@
 - (BatteryLog*) initWithFile:(NSString*)filename;
 - (void) saveToFile:(NSString*)filename;
 
+- (NSArray*) dataFromTime:(NSDate*)start;
+- (NSArray*) dataFromTime:(NSDate*)start toTime:(NSDate*)end;
+- (NSArray*) dataFromTime:(NSDate*)start withDuration:(NSTimeInterval)duration;
+
 @end

@@ -101,4 +101,16 @@
     NSLog(@"Saved history for %ld events to %@.", [dataArray count], filename);
 }
 
+- (NSArray*) dataFromTime:(NSDate*)start {
+    
+}
+
+- (NSArray*) dataFromTime:(NSDate*)start toTime:(NSDate*)end {
+    
+}
+
+- (NSArray*) dataFromTime:(NSDate*)start withDuration:(NSTimeInterval)duration {
+    
+}
+
 @end

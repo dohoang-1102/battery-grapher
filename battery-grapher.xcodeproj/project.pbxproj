@@ -19,6 +19,9 @@
 		7851FEA815CF968B00826F66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7851FEA715CF968B00826F66 /* main.m */; };
 		7851FEAF15CF968B00826F66 /* AppMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 7851FEAE15CF968B00826F66 /* AppMain.m */; };
 		7851FEB215CF968B00826F66 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7851FEB015CF968B00826F66 /* MainMenu.xib */; };
+		78574F3B15E97A2C00FC80B5 /* BatteryGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 78574F3A15E97A2C00FC80B5 /* BatteryGraph.m */; };
+		78574F3C15E97A2C00FC80B5 /* BatteryGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 78574F3A15E97A2C00FC80B5 /* BatteryGraph.m */; };
+		78574F5115E9888300FC80B5 /* GraphKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78574F5015E9888300FC80B5 /* GraphKit.framework */; };
 		78E34FCE15CF9C8800FC9B8B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E34FCD15CF9C8800FC9B8B /* IOKit.framework */; };
 		78E34FD115CFAE9800FC9B8B /* BatteryLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E34FD015CFAE9800FC9B8B /* BatteryLog.m */; };
 /* End PBXBuildFile section */
@@ -59,6 +62,9 @@
 		7851FEAD15CF968B00826F66 /* AppMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMain.h; sourceTree = "<group>"; };
 		7851FEAE15CF968B00826F66 /* AppMain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppMain.m; sourceTree = "<group>"; };
 		7851FEB115CF968B00826F66 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		78574F3915E97A2C00FC80B5 /* BatteryGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryGraph.h; sourceTree = "<group>"; };
+		78574F3A15E97A2C00FC80B5 /* BatteryGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryGraph.m; sourceTree = "<group>"; };
+		78574F5015E9888300FC80B5 /* GraphKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GraphKit.framework; path = ../../../../../System/Library/PrivateFrameworks/GraphKit.framework; sourceTree = "<group>"; };
 		78E34FCD15CF9C8800FC9B8B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		78E34FCF15CFAE9800FC9B8B /* BatteryLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryLog.h; sourceTree = "<group>"; };
 		78E34FD015CFAE9800FC9B8B /* BatteryLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryLog.m; sourceTree = "<group>"; };
@@ -80,6 +86,7 @@
 			files = (
 				78E34FCE15CF9C8800FC9B8B /* IOKit.framework in Frameworks */,
 				7851FE9C15CF968B00826F66 /* Cocoa.framework in Frameworks */,
+				78574F5115E9888300FC80B5 /* GraphKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +144,7 @@
 		7851FE9A15CF968B00826F66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78574F5015E9888300FC80B5 /* GraphKit.framework */,
 				78E34FCD15CF9C8800FC9B8B /* IOKit.framework */,
 				7851FE9B15CF968B00826F66 /* Cocoa.framework */,
 				7847FDC715D073EB005ED6C2 /* SenTestingKit.framework */,
@@ -166,6 +174,8 @@
 				78E34FD015CFAE9800FC9B8B /* BatteryLog.m */,
 				7847FE8415D0E713005ED6C2 /* BatteryEnumTypes.h */,
 				7847FE8515D0E714005ED6C2 /* BatteryEnumTypes.m */,
+				78574F3915E97A2C00FC80B5 /* BatteryGraph.h */,
+				78574F3A15E97A2C00FC80B5 /* BatteryGraph.m */,
 				7851FEB015CF968B00826F66 /* MainMenu.xib */,
 				7847FE8315D0E6F8005ED6C2 /* Library */,
 				7851FEA215CF968B00826F66 /* Supporting Files */,
@@ -292,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7847FDD215D073EB005ED6C2 /* battery_grapher_tests.m in Sources */,
+				78574F3C15E97A2C00FC80B5 /* BatteryGraph.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +316,7 @@
 				78E34FD115CFAE9800FC9B8B /* BatteryLog.m in Sources */,
 				7847FE8115D0E6F0005ED6C2 /* Enum.m in Sources */,
 				7847FE8615D0E714005ED6C2 /* BatteryEnumTypes.m in Sources */,
+				78574F3B15E97A2C00FC80B5 /* BatteryGraph.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +363,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/battery-grapher.app/Contents/MacOS/battery-grapher";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "battery-grapher-tests/battery-grapher-tests-Prefix.pch";
 				INFOPLIST_FILE = "battery-grapher-tests/battery-grapher-tests-Info.plist";
@@ -366,7 +381,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/battery-grapher.app/Contents/MacOS/battery-grapher";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "battery-grapher-tests/battery-grapher-tests-Prefix.pch";
 				INFOPLIST_FILE = "battery-grapher-tests/battery-grapher-tests-Info.plist";
@@ -429,6 +447,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "battery-grapher/battery-grapher-Prefix.pch";
 				INFOPLIST_FILE = "battery-grapher/battery-grapher-Info.plist";
@@ -441,6 +464,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "battery-grapher/battery-grapher-Prefix.pch";
 				INFOPLIST_FILE = "battery-grapher/battery-grapher-Info.plist";
